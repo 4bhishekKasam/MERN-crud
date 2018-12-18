@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   render() {
-     const { books } = this.state;
+    const { books } = this.state;
     return (
       <div className="container">
         <div className="panel panel-default">
@@ -50,7 +50,7 @@ class App extends Component {
                 {books.map(book => (
                   <tr key={book.title}>
                     <td>
-                      <Link to={`/`}>{book.isbn}</Link>
+                      <Link to={`/show/${book._id}`}>{book.isbn}</Link>
                     </td>
                     <td>{book.title}</td>
                     <td>{book.author}</td>

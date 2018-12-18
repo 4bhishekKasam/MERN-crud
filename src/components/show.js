@@ -15,7 +15,6 @@ export default class Show extends Component {
       .get("http://localhost:8080/api/book/" + this.props.match.params.id)
       .then(res => {
         this.setState({ book: res.data }, () => {
-          console.log("in show component");
           console.log(this.state.book);
         });
       });
