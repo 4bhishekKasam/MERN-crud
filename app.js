@@ -1,6 +1,7 @@
 var express = require("express");
 var path = require("path");
 var logger = require("morgan");
+var cors = require('cors');
 var bodyParser = require("body-parser");
 
 require("./config/db");
@@ -8,6 +9,7 @@ require("./config/db");
 var book = require("./routes/book");
 
 var app = express();
+app.use(cors());
 
 const port = parseInt(process.env.PORT || 8080);
 
